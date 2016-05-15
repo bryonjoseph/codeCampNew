@@ -83,7 +83,7 @@
           <h1 class="header">Want to be a Web Developer?</h1>
           <h3 id="header-content">Get with the Program. This course is an immersive, hands-on, problem-solving bootcamp<br>
           designed to produce workplace-ready junior programmers.</h3>
-          <p class="video"><a class="popup-youtube" href="https://www.youtube.com/watch?v=ge2nTU7OMzU"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>  Watch Video</a></p>
+          <a class="popup-youtube" href="https://www.youtube.com/watch?v=ge2nTU7OMzU"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
         </div>
       </div>
     </div>
@@ -160,20 +160,7 @@
   <!--Youtube Popout-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-
-  <script>
-  $(document).ready(function() {
-      $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-          disableOn: 700,
-          type: 'iframe',
-          mainClass: 'mfp-fade',
-          removalDelay: 160,
-          preloader: false,
-
-          fixedContentPos: false
-      });
-  });
-  </script>
+  <script src="js/youtube_popout.js"></script>
 
 </body>
 
