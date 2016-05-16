@@ -481,8 +481,9 @@
                   $helpBlock.html(errorsFound[0] + 
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 } else {
+                  $(this).css('border-color', 'red');
                   // Multiple? Being sloppy? Glue them together into an UL.
-                  $helpBlock.html("<ul role=\"alert\"><li>" + errorsFound.join("</li><li>") + "</li></ul>" +
+                  $helpBlock.html("<span role=\"alert\">" + errorsFound.join("") + "</span>" +
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 }
               } else {
@@ -491,6 +492,7 @@
                   $controlGroup.addClass("success");
                 }
                 $helpBlock.html($helpBlock.data("original-contents"));
+                $(this).css('border-color', '');
               }
 
               if (e.type === "blur") {

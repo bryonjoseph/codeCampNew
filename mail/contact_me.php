@@ -24,5 +24,12 @@ $email_body = "You have received a new orientation application form.\n\n"."Here 
 $headers = "From: noreply@jobtrainworks.org\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
+
+//Send confirmation email
+$to_2 = "$email_address";
+$email_subject_2 = "Confirmation - Jobtrain Orientation";
+$email_body_2 = "Thank you for your interest in Jobtrain's Web Developement Bootcamp, $name!\n\nWe look forward to seeing you at this appointment date: $orientationDate.\n\nUpon arrival, please check in with the front desk, and let them know you're here for orientation!";
+$headers_2 = "From: noreply@jobtrainworks.org\n";
+mail($to_2,$email_subject_2,$email_body_2,$headers_2);
 return true;			
 ?>
