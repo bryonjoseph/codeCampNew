@@ -29,6 +29,10 @@ p {
     line-height: 1.5;
 }
 
+textarea {
+    resize: none;
+}
+
 @font-face {
     font-family: DataControl;
     src: url(../fonts/data-latin.ttf);
@@ -193,6 +197,12 @@ p {
 
 .section-header {
     font-size: 24px;
+}
+
+input,
+textarea,
+option {
+    text-align: center;
 }
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
