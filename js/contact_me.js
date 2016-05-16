@@ -1,6 +1,6 @@
 $(function() {
 
-    $("input,textarea").jqBootstrapValidation({
+    $("input,textarea,select").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -12,6 +12,7 @@ $(function() {
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var orientationDate = $("select#orientationDate").val();
+            var heardAbout = $("textarea#heardAbout").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
@@ -24,8 +25,9 @@ $(function() {
                 data: {
                     name: name,
                     phone: phone,
-                    orientationDate: orientationDate,
                     email: email,
+                    orientationDate: orientationDate,
+                    heardAbout: heardAbout,
                     message: message
                 },
                 cache: false,
