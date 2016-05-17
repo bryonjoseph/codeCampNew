@@ -33,6 +33,53 @@ textarea {
     resize: none;
 }
 
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #333;
+}
+
+footer span.copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: 'Prime',Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    line-height: 40px;
+}
+
+footer ul.quicklinks {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    outline: 0;
+    color: white;
+    background-color: #222;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+ul.social-buttons li a:hover {
+    background-color: #94c039;
+    transform: scale(1.2);
+}
+
 @font-face {
     font-family: DataControl;
     src: url(../fonts/data-latin.ttf);
