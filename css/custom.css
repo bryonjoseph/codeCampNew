@@ -29,14 +29,20 @@ p {
     line-height: 1.5;
 }
 
-textarea {
+textarea.form-control {
+    height: 250px;
+    margin-bottom: 25px;
     resize: none;
 }
 
 footer {
     padding: 25px;
     text-align: center;
-    background-color: #333;
+    background-color: #222;
+}
+
+label {
+    color: white;
 }
 
 footer span.copyright {
@@ -45,6 +51,10 @@ footer span.copyright {
     font-family: 'Prime',Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     line-height: 40px;
+}
+
+ul {
+    list-style-position: inside;
 }
 
 footer ul.quicklinks {
@@ -114,7 +124,7 @@ ul.social-buttons li a:hover {
     background-color: transparent;
 }
 .navbar-default .navbar-toggle:hover {
-    background-color: #333;
+    background-color: #444;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -122,12 +132,17 @@ ul.social-buttons li a:hover {
 }
 
 .navbar-default .navbar-nav>li>a {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Josefin sans','Open Sans','Helvetica Neue',Arial,sans-serif;
     color: white;
-}
+    letter-spacing: 4.2px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    }
+
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: #333;
+    color: #444;
 }
 
 .navbar-default .navbar-nav>li>a:focus {
@@ -138,12 +153,11 @@ ul.social-buttons li a:hover {
 .navbar-default .navbar-nav>.active>a:focus, 
 .navbar-default .navbar-nav>.active>a:hover {
     color: white;
-    background-color: #333;
+    background-color: #444;
 }
 
 #logo {
     font-family: DataControl;
-    font-size: 42px;
     color: white;
     transition: 0.35s;
     font-weight: 700;
@@ -152,6 +166,26 @@ ul.social-buttons li a:hover {
 #logo:hover {
 	transform: scale(1.2);
     text-shadow: 10px 0 5px #333;
+}
+
+.splash-section h2 {
+    color: #fff;
+    font-style: italic;
+    font-weight: 555;
+    font-family: 'PT sans', sans-serif, cursive;
+    position: relative;
+    margin:42px -42% 0 0; 
+    float: :right;
+     font-weight: 220;
+    line-height: 1.42857143 !important;
+    letter-spacing: 2.2px;
+    text-shadow: 1.25px 1.78px .42px rgba(150, 150, 150, .42);
+}
+
+@media(max-width:990px) {
+    .navbar-right {
+        float: left!important;
+    }
 }
 
 @media(min-width:767px) {
@@ -178,14 +212,23 @@ ul.social-buttons li a:hover {
     }
 }
 
+@media(max-width:767px) {
+    #logo {
+        margin-top: 0;
+    }
+}
+
 @media(max-width:990px) {
     #logo {
         font-size: 30px;
-        font-weight: 500;
-        margin-top: -10px;
+            font-weight: 500;
+            margin-top: -10px;
     }
     .navbar-brand {
         margin-top: 0;
+    }
+    .navbar-default .navbar-nav ul {
+        background-color: red;
     }
 }
 
@@ -193,6 +236,10 @@ ul.social-buttons li a:hover {
     #logo:hover {
         transform: none;
     }
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
 }
 
 .header {
@@ -204,8 +251,12 @@ ul.social-buttons li a:hover {
 }
 
 #header-content {
-    color: rgba(255, 255, 255, 0.6);
+    /*color: rgba(194,222,242,1);*/
+    color: #62c2e4;
     font-weight: 500;
+    line-height: 1.42857143 !important;
+    letter-spacing: 5px;
+    text-shadow: 1.5px 2px .5px rgba(150, 150, 150, .77);
 }
 
 .glyphicon {
@@ -216,9 +267,9 @@ ul.social-buttons li a:hover {
 }
 
 .glyphicon:hover {
-    color: #cd201f;
     outline: none;
     transform: rotate(360deg) scale(1.4);
+    color: #333;
 }
 
 .popup-youtube:focus {
@@ -246,16 +297,153 @@ ul.social-buttons li a:hover {
     margin-top: 75px;
 }
 
+.box {
+ 
+}
+
+.about-section h1 {
+    font-family: DataControl;
+    color: #444;
+    transition: 0.35s;
+    font-weight: 700;
+}
+
+.about-section .glyphicon {
+    margin-top: 22px;
+}
+
+.aboutText {
+    color: #555;
+    font-family: sans-serif;
+    font-size: 29px;
+    font-variant-caps: all-petite-caps;
+    font-style: italic;
+    border-radius: 4px;
+    padding: 17px;
+    line-height: 1.42857143;
+    letter-spacing: 1.42px;
+    -webkit-filter: grayscale(1);
+    transition: .42s;
+}
+
+.aboutText:hover{
+    -webkit-filter:grayscale(0);
+}
+
+.about-section button {
+    font-size: 22px;
+    height: 20%;
+    width: 42%;
+    color: #fff;
+    background-color: #94c039;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.about-section button:hover {
+    background-color: #94c039;
+}
+
+.about-section button:focus {
+    outline-color: #94c039;
+}
+
+#code:hover {
+    color: #94c039;
+    text-shadow: 7px 12px 5px #333;
+}
+
+#love:hover {
+    color: #FE5D40;
+    text-shadow: 7px 12px 5px #333;
+}
+
+#world:hover {
+    color: #62c2e4;
+    text-shadow: 7px 12px 5px #333;
+}
+
+/*-- diaganol section --*/
+svg {
+  display: block;
+  width: 100%;
+  height: 142px;
+  background: #e6e6e6;
+}
+
+.staff-section h1, h2 {
+    color: #94c039;
+    font-weight: 220;
+    line-height: 1.42857143 !important;
+    letter-spacing: .284px;
+    text-shadow: 1.25px 1.84px .42px rgba(150, 150, 150, .42);
+}
+
+.staff {
+    height: 200px;
+    width: 200px;
+    margin: 17px auto 12px auto;
+    border-radius: 500px;
+    background-image: url(img/staff/IMG_0013.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    overflow: hidden;
+    text-shadow: 1.5px 2px .5px rgba(150, 150, 150, .77);
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    float: left;
+    border-radius: 1.7px;
+    
+    -webkit-box-shadow: 0px 9px 18px -12px #333;
+    -moz-box-shadow: 0px 9px 18px -12px #333;
+    box-shadow: 0px 9px 18px -12px #333;
+}
+
+#mapText {
+    color: #fff;
+    text-orientation: bottom 1.7;
+    position: absolute;
+    z-index: 1;
+    display: all;
+}
+
+#mapTexts {
+    color: #94c039;
+} 
+
+.location-section #map #mapText .glyphicon {
+    font-size: 17px;
+    margin-top: none;
+    color: red;
+    transition: 0.35s;
+}
+
+.location-section #map #mapText .glyphicon:hover {
+    outline: none;
+    transform: none;
+}
+
+.register-section h1 {
+    color: #FE5D40;
+}
+
 .section-header {
     font-size: 24px;
 }
 
 #required {
-    color: red;
+    color: #fa6d81;
 }
 
 .text-danger {
-    color: red;
+    color: #fa6d81;
 }
 
 #submitBtn {
@@ -273,6 +461,46 @@ ul.social-buttons li a:hover {
 
 #submitBtn:focus {
     outline: none;
+}
+
+input.form-control,
+select.form-control {
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.form-control:focus {
+    border-color: #62c2e4;
+    outline: none;
+    -webkit-box-shadow: inset 0 -2px #62c2e4;
+    box-shadow: inset 0 -2px #62c2e4;
+}
+
+.form-group input.form-control {
+    transition: 1s;
+}
+
+.form-group.success input.form-control,
+.form-group.success select.form-control {
+    border-color: #00cc66;
+    outline: none;
+    -webkit-box-shadow: inset 0 -2px #00cc66;
+    box-shadow: inset 0 -2px #00cc66;
+}
+
+.form-group.error input.form-control,
+.form-group.error select.form-control,
+.form-group.warning input.form-control {
+    border-color: #fa6d81;
+    outline: none;
+    -webkit-box-shadow: inset 0 -2px #fa6d81;
+    box-shadow: inset 0 -2px #fa6d81;
+}
+
+.fixed.warning input.form-control {
+    border-color: #ccc;
+    box-shadow: none;
+    outline: 0 none;
 }
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
@@ -292,40 +520,53 @@ of those sections to manage the look and feel of the site. */
 
 .partners-section {
     height: auto;
-    padding-top: 150px;
+    padding-top: 124px;
     padding-bottom: 150px;
     text-align: center;
     background: white;
-    -webkit-box-shadow: 0px -9px 18px -5px #333;
-    -moz-box-shadow: 0px -9px 18px -5px #333;
-    box-shadow: 0px -9px 18px -5px #333;
 }
 
 .about-section {
-    height: 100%;
-    padding-top: 150px;
+    height: auto;
+    padding-top: 117px;
     text-align: center;
-    background: #eee;
+    color: #222;
+    font-family: 'Share','Open Sans','Helvetica Neue',Arial,sans-serif;
+    background: #e6e6e6;
+    font-weight: 720;
+    letter-spacing: 5px;
+    text-shadow: 1.5px 2px .5px rgba(150, 150, 150, .86);
+
 }
 
 .staff-section {
-    height: 100%;
-    padding-top: 150px;
+    height: auto;
+    padding: 112px 0 112px 0;
     text-align: center;
-    background: #fff;
+    color: #ccc; 
+    background: #000;
 }
 
 .location-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 55px;
     text-align: center;
-    background: #eee;
+    background: #000;
+    color: teal;
 }
 
 .register-section {
     height: auto;
-    padding-top: 150px;
+    padding-top: 82px;
     padding-bottom: 150px;
     text-align: center;
-    background: #fff;
+    background: #333;
+    letter-spacing: 4.2px;
+    background-image: url(../img/bg/sdfgsdf.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
+
